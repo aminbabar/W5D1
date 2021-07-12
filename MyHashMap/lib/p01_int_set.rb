@@ -1,14 +1,27 @@
+
+# [1,2,4,3]
+
+# [false, true, true, true, true, false].include?() => O(1)
+
 class MaxIntSet
-  def initialize(max)
+  def initialize(max=nil)
+    @store = []
+    if max > 0 && !max.nil?
+      (0..max).each do |i|
+        @store << false
+      end
+    end
   end
 
   def insert(num)
+    # raise if num > max
   end
 
   def remove(num)
   end
 
   def include?(num)
+    @store[num]
   end
 
   private
